@@ -1,0 +1,6 @@
+¿Qué operaciones hace ese circuito sobre el número B?
+
+El circuito 'inversor_4' realiza las siguientes operaciones sobre B:
+	- Si la señal de control INV vale 0, el valor de B no se modifica: los cuatro bits de B se mantienen iguales.
+	- Si INV vale 1, el circuito invierte bit a bit B (NOT) y luego, usando un 'incrementador_4' basado en un sumador completo de cuatro bits ('sumador_4'), le suma 1 al resultado. Esto da como salida el complemento a 2 de B.
+Se puede concluir que el circuito permite transformar el operando B en su complemento a dos cuando es necesario realizar una resta binaria.
