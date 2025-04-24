@@ -13,7 +13,7 @@ sumar_elementos_vector:
 	xor esi, esi ; contador de elementos
 	
 	.for:
-		add eax, [rdi + esi] ; sumo el valor
+		add eax, [VECTOR + esi] ; sumo el valor
 		add esi, 4 ; paso al siguiente elemento
 		cmp esi, 64 ; chequeo si llego a los 16 elementos: (4 * 16)
 		jne .for
@@ -21,12 +21,12 @@ sumar_elementos_vector:
 	ret
 
 main:
-	mov rdi, VECTOR ; cargar la dirección de memoria de VECTOR en rdi
+	mov edi, VECTOR ; cargar la dirección de memoria de VECTOR en edi
 	call sumar_elementos_vector
 	
-	mov rdi, TEXTO ; primer argumento de printf
+	mov edi, TEXTO ; primer argumento de printf
 	mov esi, eax ; paso el resultado a esi (segundo argumento de printf)
-	xor eax, eax ; limpiar rax para printf (número de argumentos flotantes)
+	xor eax, eax ; limpiar eax para printf (número de argumentos flotantes)
 	call printf
 
 	xor eax, eax ; return 0
