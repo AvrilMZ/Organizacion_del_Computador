@@ -1,0 +1,3 @@
+*.mem
+*.txt
+__pycache__/
