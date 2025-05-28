@@ -19,7 +19,7 @@ monstruo_t evolucion(monstruo_t monstruo)
 	return monstruo;
 }
 
-void imprimir_mounstruo(monstruo_t mons)
+void imprimir_monstruo(monstruo_t mons)
 {
 	printf("Nombre: ");
 	for (int i = 0; i < strlen(mons.nombre); i++)
@@ -27,8 +27,8 @@ void imprimir_mounstruo(monstruo_t mons)
 		printf("%c", mons.nombre[i]);
 	}
 	printf("\nVida: %i\n", mons.vida);
-	printf("Ataque: %e\n", mons.ataque);
-	printf("Defensa: %e\n", mons.defensa);
+	printf("Ataque: %.2f\n", mons.ataque);
+	printf("Defensa: %.2f\n", mons.defensa);
 }
 
 int main()
@@ -43,12 +43,12 @@ int main()
 	tope++;
 
 	printf("ANTES DE EVOLUCIONAR:\n");
-	imprimir_mounstruo(monstruos[0]);
+	imprimir_monstruo(monstruos[0]);
 
 	monstruos[0] = evolucion(monstruos[0]);
 
 	printf("\nDESPUES DE EVOLUCIONAR:\n");
-	imprimir_mounstruo(monstruos[0]);
+	imprimir_monstruo(monstruos[0]);
 
 	return 0;
 }

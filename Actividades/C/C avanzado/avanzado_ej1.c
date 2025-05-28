@@ -12,7 +12,7 @@ typedef struct monstruo
 	double defensa;
 } monstruo_t;
 
-void imprimir_mounstruo(monstruo_t mons)
+void imprimir_monstruo(monstruo_t mons)
 {
 	printf("Nombre: ");
 	for (int i = 0; i < strlen(mons.nombre); i++)
@@ -20,8 +20,8 @@ void imprimir_mounstruo(monstruo_t mons)
 		printf("%c", mons.nombre[i]);
 	}
 	printf("\nVida: %i\n", mons.vida);
-	printf("Ataque: %e\n", mons.ataque);
-	printf("Defensa: %e\n", mons.defensa);
+	printf("Ataque: %.2f\n", mons.ataque);
+	printf("Defensa: %.2f\n", mons.defensa);
 }
 
 int main()
@@ -35,7 +35,7 @@ int main()
 	monstruos[0].defensa = 15;
 	tope++;
 
-	imprimir_mounstruo(monstruos[0]);
+	imprimir_monstruo(monstruos[0]);
 
 	return 0;
 }
