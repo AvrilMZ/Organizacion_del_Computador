@@ -1,4 +1,4 @@
-seccion .text:
+seccion .text
 	global countChars
 	extern strlen
 
