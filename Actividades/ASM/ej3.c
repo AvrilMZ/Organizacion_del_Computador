@@ -3,8 +3,8 @@
 int countChars(char *s, char c)
 {
 	int contador = 0;
-	int cantidad_letras = strlen(s);
-	for (int i = 0; i < cantidad_letras; i++)
+	size_t cantidad_letras = strlen(s);
+	for (size_t i = 0; i < cantidad_letras; i++)
 	{
 		if (s[i] == c)
 		{
