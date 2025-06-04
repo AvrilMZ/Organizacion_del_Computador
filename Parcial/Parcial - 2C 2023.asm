@@ -1,5 +1,6 @@
+extern calloc
+
 seccion .text
-	extern calloc
 
 sumaElemento:
 	push rbp
