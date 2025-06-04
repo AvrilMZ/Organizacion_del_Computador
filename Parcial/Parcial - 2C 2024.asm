@@ -11,7 +11,6 @@ section .text
 stringify:
 	push rbp
 	mov rbp, rsp
-	sub rsp, 8
 
 	push r12
 	push r13
@@ -65,6 +64,5 @@ stringify:
 		pop r13
 		pop r12
 
-		add rsp, 8
 		pop rbp
 		ret

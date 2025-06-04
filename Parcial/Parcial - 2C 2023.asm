@@ -5,6 +5,7 @@ seccion .text
 sumaElemento:
 	push rbp
 	mov rbp, rsp
+	sub rsp, 8
 
 	push rbx
 	push r12
@@ -61,5 +62,6 @@ sumaElemento:
 		pop r12
 		pop rbx
 
+		add rsp, 8
 		pop rbp
 		ret
